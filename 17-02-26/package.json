@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "dev": "node --watch api.js"
+  },
   "dependencies": {
     "express": "^5.2.1"
   }
