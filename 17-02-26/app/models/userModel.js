@@ -1,8 +1,6 @@
-import express from 'express'
 
-const app = express()
-
-const user = {
+const userModel = {
+  userData: {
     id: 1,
     firstName: "Emily",
     lastName: "Johnson",
@@ -71,24 +69,7 @@ const user = {
       network: "Ethereum (ERC20)"
     },
     role: "admin"
-  };
+  }
+}
 
-app.use(express.json())
-
-app.listen(3001, () => {
-  console.log('O servidor esta rodando na porta 3001')
-})
-
-// =========================================================== //
-
-app.get("/user", (req, res) => {
-  res.status(200).json({"user": user})
-})
-
-app.post("/", (req, res) => {
-  const data = req.body
-  const userName = data.name
-  const userAge = data.age
-  const userEmail = data.email
-  res.status(200).send(`Olá, bom dia ${userName}, como você está? Você tem ${userAge} anos de idade e seu email é ${userEmail}`)
-})
+export default userModel
