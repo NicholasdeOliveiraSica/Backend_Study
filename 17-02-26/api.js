@@ -73,21 +73,22 @@ const user = {
     role: "admin"
   };
 
+app.use(express.json())
+
 app.listen(3001, () => {
   console.log('O servidor esta rodando na porta 3001')
 })
 
-app.use(express.json())
+// =========================================================== //
 
 app.get("/user", (req, res) => {
   res.status(200).json({"user": user})
-})
+})''
 
-app.post("/user", (req, res) => {
+app.post("/", (req, res) => {
   const data = req.body
   const userName = data.name
   const userAge = data.age
   const userEmail = data.email
-  console.log(data.body)
   res.status(200).send(`Olá, bom dia ${userName}, como você está? Você tem ${userAge} anos de idade e seu email é ${userEmail}`)
 })
