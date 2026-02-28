@@ -83,7 +83,7 @@ app.listen(3001, () => {
 
 app.get("/user", (req, res) => {
   res.status(200).json({"user": user})
-})''
+})
 
 app.post("/", (req, res) => {
   const data = req.body
