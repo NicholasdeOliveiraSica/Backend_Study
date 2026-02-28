@@ -1,4 +1,4 @@
-import userModel from "../models/userModel"
+import userModel from "../models/userModel.js"
 
 const userData = userModel.userData
 
@@ -13,7 +13,7 @@ const userController = {
         const userName = data.name
         const userAge = data.age
         const userEmail = data.email
-        
+
         res.status(200).send(`Olá, bom dia ${userName}, como você está? Você tem ${userAge} anos de idade e seu email é ${userEmail}`)
     },
 
